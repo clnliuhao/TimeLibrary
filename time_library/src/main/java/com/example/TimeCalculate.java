@@ -4,7 +4,7 @@ package com.example;
  * 时间的有关计算
  *
  * @author 刘浩 2015-11-02 20:10:14
- * @version 1.1.0
+ * @version 1.2.0
  */
 @SuppressWarnings({"unused", "WeakerAccess"})
 public final class TimeCalculate{
@@ -16,9 +16,9 @@ public final class TimeCalculate{
      */
     public static byte secondsNumberIfMoreThanOneDay(long pSeconds){
 
-        if (TimeConstant.getPerDayNumberOfHours() * TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds() > pSeconds) {
+        if ((TimeConstant.getPerDayNumberOfHours() * TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds()) > pSeconds) {
             return 1;
-        } else if (TimeConstant.getPerDayNumberOfHours() * TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds() == pSeconds) {
+        } else if ((TimeConstant.getPerDayNumberOfHours() * TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds()) == pSeconds) {
             return 0;
         } else {
             return -1;
@@ -33,9 +33,9 @@ public final class TimeCalculate{
      */
     public static byte secondsNumberIfMoreThanTwelveHour(long pSeconds){
 
-        if ((TimeConstant.getPerDayNumberOfHours() / 2) * TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds() > pSeconds) {
+        if (((TimeConstant.getPerDayNumberOfHours() / 2) * TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds()) > pSeconds) {
             return 1;
-        } else if ((TimeConstant.getPerDayNumberOfHours() / 2) * TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds() == pSeconds) {
+        } else if (((TimeConstant.getPerDayNumberOfHours() / 2) * TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds()) == pSeconds) {
             return 0;
         } else {
             return -1;
@@ -63,9 +63,9 @@ public final class TimeCalculate{
      * @return 1：大于,0：等于，-1：小于
      */
     public static byte secondsNumberIfMoreThanOneHour(long pSeconds){
-        if (TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds() > pSeconds) {
+        if ((TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds()) > pSeconds) {
             return 1;
-        } else if (TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds() == pSeconds) {
+        } else if ((TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds())== pSeconds) {
             return 0;
         } else {
             return -1;
