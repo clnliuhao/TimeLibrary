@@ -3,8 +3,8 @@ package com.example;
 /**
  * 时间的有关计算
  *
- * @author 刘浩 2015-11-02 19:03
- * @version 1.0.0
+ * @author 刘浩 2015-11-02 20:10:14
+ * @version 1.1.0
  */
 @SuppressWarnings({"unused", "WeakerAccess"})
 public final class TimeCalculate{
@@ -49,7 +49,7 @@ public final class TimeCalculate{
      * @return 大于的小时数，取值范围：0至23。若提供的秒数大于1天的总秒数时返回-1
      */
     public static byte secondsNumberMoreThanHourNumber(long pSeconds){
-        if (0 <= secondsNumberIfMoreThanOneDay(pSeconds)) {
+        if (0 < secondsNumberIfMoreThanOneDay(pSeconds)) {
             return -1;
         }
         return (byte) (pSeconds / (TimeConstant.getPerHourNumberOfMinutes() * TimeConstant.getPerMinuteNumberOfSeconds()));
@@ -79,7 +79,7 @@ public final class TimeCalculate{
      * @return 大于的小时数，取值范围：0至59。若提供的秒数大于1小时的总秒数时返回-1
      */
     public static byte secondsNumberMoreThanMinuteNumber(long pSeconds){
-        if (0 <= secondsNumberIfMoreThanOneHour(pSeconds)) {
+        if (0 < secondsNumberIfMoreThanOneHour(pSeconds)) {
             return -1;
         }
         return (byte) (pSeconds / TimeConstant.getPerMinuteNumberOfSeconds());
